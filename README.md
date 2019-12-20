@@ -2,3 +2,80 @@
 
 无法导入vcpkg中的lib
 
+gtest导入失败
+
+'vcpkg integrate install'
+
+'vcpkg integrate remove'
+
+'vcpkg integrate project'
+
+
+4.5. 集成到CMake
+最新的Visual Studio 2015和2017大力支持CMake工程，所以对cmake的支持当然不能少。在cmake中集成只要在cmake文件中加入下面这句话即可。
+
+-DCMAKE_TOOLCHAIN_FILE="D:\vcpkg\scripts\buildsystems\vcpkg.cmake"
+
+其中是指vcpkg实际所在目录。
+
+4.6. 集成静态库
+Vcpkg默认编译链接的是动态库，如果要链接静态库，目前还没有简便的方法。需要做如下操作
+
+用文本方式打开vcxproj工程文件
+在xml的段里面增加如下两句话即可
+<VcpkgTriplet>x86-windows-static</VcpkgTriplet>
+<VcpkgEnabled>true</VcpkgEnabled>
+————————————————
+版权声明：本文为CSDN博主「Achilles」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/cjmqas/article/details/79282847
+
+
+
+cd "D:\visual studio 2015\Projects\CMakeProject1"
+mkdir b
+cd b
+cmake ../ -DCMAKE_TOOLCHAIN_FILE="D:\vcpkg\scripts\buildsystems\vcpkg.cmake"
+
+
+
+```
+
+-- Building for: Visual Studio 15 2017
+CMake Error at CMakeLists.txt:6 (project):
+  Failed to run MSBuild command:
+
+    MSBuild.exe
+
+  to get the value of VCTargetsPath:
+
+    用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.3.1+1def00d3d
+    版权所有(C) Microsoft Corporation。保留所有权利。
+
+    生成启动时间为 2019/12/20 19:29:45。
+    节点 1 上的项目“D:\visual studio 2015\Projects\CMakeProject1\b\CMakeFiles\3.12.0\VCTargetsPath.vcxproj”(默认目标) 。
+    D:\Program Files\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(379,5): error MSB8020: The build tools for Visual Studio 2017 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install Visual Studio 2017 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution". [D:\visual studio 2015\Projects\CMakeProject1\b\CMakeFiles\3.12.0\VCTargetsPath.vcxproj]
+    已完成生成项目“D:\visual studio 2015\Projects\CMakeProject1\b\CMakeFiles\3.12.0\VCTargetsPath.vcxproj”(默认目标)的操作 - 失败。
+
+    生成失败。
+
+    “D:\visual studio 2015\Projects\CMakeProject1\b\CMakeFiles\3.12.0\VCTargetsPath.vcxproj”(默认目标) (1) ->
+    (PrepareForBuild 目标) ->
+      D:\Program Files\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(379,5): error MSB8020: The build tools for Visual Studio 2017 (Platform Toolset = 'v141') cannot be found. To build using the v141 build tools, please install Visual Studio 2017 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution". [D:\visual studio 2015\Projects\CMakeProject1\b\CMakeFiles\3.12.0\VCTargetsPath.vcxproj]
+
+        0 个警告
+        1 个错误
+
+    已用时间 00:00:00.35
+
+
+  Exit code: 1
+
+
+
+-- Configuring incomplete, errors occurred!
+See also "D:/visual studio 2015/Projects/CMakeProject1/b/CMakeFiles/CMakeOutput.log".
+
+```
+
+
+vs 启动项
