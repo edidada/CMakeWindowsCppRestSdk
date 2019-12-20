@@ -9,3 +9,10 @@ cmake_minimum_required (VERSION 3.8)
 add_executable (CMakeProject1 "CMakeProject1.cpp" "CMakeProject1.h")
 
 # TODO: 如有需要，请添加测试并安装目标。
+
+enable_testing()
+
+find_package(GTest CONFIG REQUIRED)
+target_link_libraries(main PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
+
+add_test(AllTestsInMain main)

@@ -1,4 +1,4 @@
 # CMakeProject1
 
-无法导入vcpkg中的lib
+鏃犳硶瀵煎叆vcpkg涓殑lib
 
