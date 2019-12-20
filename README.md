@@ -32,8 +32,8 @@ Vcpkg默认编译链接的是动态库，如果要链接静态库，目前还没
 
 
 cd "D:\visual studio 2015\Projects\CMakeProject1"
-mkdir b
-cd b
+mkdir build
+cd build
 cmake ../ -DCMAKE_TOOLCHAIN_FILE="D:\vcpkg\scripts\buildsystems\vcpkg.cmake"
 
 
@@ -79,3 +79,32 @@ See also "D:/visual studio 2015/Projects/CMakeProject1/b/CMakeFiles/CMakeOutput.
 
 
 vs 启动项
+
+
+严重性	代码	说明	项目	文件	行	禁止显示状态	禁止显示状态
+错误	MSB8020	无法找到 Visual Studio 2017 的生成工具(平台工具集 =“v141”)。若要使用 v141 生成工具进行生成，请安装 Visual Studio 2017 生成工具。或者，可以升级到当前 Visual Studio 工具，方式是通过选择“项目”菜单或右键单击该解决方案，然后选择“重定解决方案目标”。	D:\visual studio 2015\Projects\CMakeProject1\b\CMakeFiles\3.12.0\VCTargetsPath.vcxproj	D:\Program Files\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets	379		
+
+
+是由于没有安装v142工具集，其实v142对应的是VS2019，我的项目从另外一台电脑copy过来的，之前的编译器VS2019，现在是VS2017，所以报的这个错误。
+v142–>VS2019
+v141–>VS2017
+v140–>VS2015
+v120–>VS2013
+
+
+<PlatformToolset>v141</PlatformToolset>
+
+cmake 
+cmake -version
+cmake version 3.12.0
+
+
+升级cmake版本到16(版本大于14)，命令行啊下运行，搞定
+
+
+
+vs默认的编译文件是out文件夹，可以设置的
+
+
+
+

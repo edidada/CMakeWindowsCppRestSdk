@@ -13,6 +13,6 @@ add_executable (CMakeProject1 "CMakeProject1.cpp" "CMakeProject1.h")
 enable_testing()
 
 find_package(GTest CONFIG REQUIRED)
-target_link_libraries(main PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
+target_link_libraries(CMakeProject1 PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
 
-add_test(AllTestsInMain main)
+add_test(AllTestsInMain CMakeProject1)
