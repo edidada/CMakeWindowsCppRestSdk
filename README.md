@@ -4,11 +4,11 @@
 
 gtest导入失败
 
-'vcpkg integrate install'
+`vcpkg integrate install`
 
-'vcpkg integrate remove'
+`vcpkg integrate remove`
 
-'vcpkg integrate project'
+`vcpkg integrate project`
 
 
 4.5. 集成到CMake
@@ -105,6 +105,12 @@ cmake version 3.12.0
 
 vs默认的编译文件是out文件夹，可以设置的
 
+### 如何写gtest单元测试用例
+
+如何运行
 
 
 
+ [使用Google Test库进行单元测试](https://chenxiaowei.gitbook.io/cmake-cookbook/4.0-chinese/4.3-chinese) 
+
+ https://github.com/dev-cafe/cmake-cookbook/tree/v1.0/chapter-04/recipe-03 
