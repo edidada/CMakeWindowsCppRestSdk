@@ -2,6 +2,7 @@
 //
 
 #include "CMakeProject1.h"
+#include "src/MyClass.h"
 
 using namespace std;
 

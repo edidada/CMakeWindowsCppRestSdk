@@ -10,7 +10,6 @@ gtest导入失败
 
 `vcpkg integrate project`
 
-
 4.5. 集成到CMake
 最新的Visual Studio 2015和2017大力支持CMake工程，所以对cmake的支持当然不能少。在cmake中集成只要在cmake文件中加入下面这句话即可。
 
@@ -113,4 +112,4 @@ vs默认的编译文件是out文件夹，可以设置的
 
  [使用Google Test库进行单元测试](https://chenxiaowei.gitbook.io/cmake-cookbook/4.0-chinese/4.3-chinese) 
 
- https://github.com/dev-cafe/cmake-cookbook/tree/v1.0/chapter-04/recipe-03 
+ https://github.com/edidada/cmake-cookbook/tree/v1.0/chapter-04/recipe-03 
