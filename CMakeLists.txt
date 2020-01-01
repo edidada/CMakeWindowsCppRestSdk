@@ -6,7 +6,7 @@ cmake_minimum_required (VERSION 3.8)
 project("CMakeProject1")
 
 # 将源代码添加到此项目的可执行文件。
-# add_executable (CMakeProject1 "CMakeProject1.cpp" "src/MyClass.cpp")
+add_executable (CMakeProject1 "CMakeProject1.cpp" "src/MyClass.cpp")
 add_executable (CMakeProject1Gtest "src/samples/sample1.cc")
 
 # TODO: 如有需要，请添加测试并安装目标。
