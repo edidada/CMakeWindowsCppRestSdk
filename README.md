@@ -103,6 +103,10 @@ cmake version 3.12.0
 
 
 vs默认的编译文件是out文件夹，可以设置的
+这里是out/build文件夹
+
+新建类MyClass
+
 
 ### 如何写gtest单元测试用例
 
@@ -112,4 +116,11 @@ vs默认的编译文件是out文件夹，可以设置的
 
  [使用Google Test库进行单元测试](https://chenxiaowei.gitbook.io/cmake-cookbook/4.0-chinese/4.3-chinese) 
 
- https://github.com/edidada/cmake-cookbook/tree/v1.0/chapter-04/recipe-03 
+ https://github.com/edidada/cmake-cookbook/tree/v1.0/chapter-04/recipe-03
+
+ ### vcpkg
+ 
+ `"CMAKE\CMake\bin\cmake.exe"  -G "Ninja"`
+
+"cmd.exe" /c ""D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2019\PROFESSIONAL\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\CMake\bin\cmake.exe"  -G "Ninja" -DCMAKE_INSTALL_PREFIX:PATH="D:\visual studio 2015\Projects\CMakeProject1\out\install\x64-Debug" -DCMAKE_CXX_COMPILER:FILEPATH="D:/Program Files/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.23.28105/bin/HostX64/x64/cl.exe" -DCMAKE_C_COMPILER:FILEPATH="D:/Program Files/Microsoft Visual Studio/2019/Professional/VC/Tools/MSVC/14.23.28105/bin/HostX64/x64/cl.exe"  -DCMAKE_TOOLCHAIN_FILE="D:/vcpkg/scripts/buildsystems/vcpkg.cmake" -DCMAKE_BUILD_TYPE="Debug" -DCMAKE_MAKE_PROGRAM="D:\PROGRAM FILES\MICROSOFT VISUAL STUDIO\2019\PROFESSIONAL\COMMON7\IDE\COMMONEXTENSIONS\MICROSOFT\CMAKE\Ninja\ninja.exe" "D:\visual studio 2015\Projects\CMakeProject1" 2>&1"
+

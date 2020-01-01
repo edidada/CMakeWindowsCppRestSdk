@@ -2,12 +2,16 @@
 //
 
 #include "CMakeProject1.h"
-#include "src/MyClass.h"
+#include "include/MyClass.h"
 
 using namespace std;
 
 int main()
 {
 	cout << "Hello CMake." << endl;
+
+	MyClass myClass;
+	int integer = myClass.get();
+	cout << integer << endl;
 	return 0;
 }
