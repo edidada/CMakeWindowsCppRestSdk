@@ -5,6 +5,7 @@
 #include "include/MyClass.h"
 
 using namespace std;
+// using namespace web;
 
 int main()
 {
@@ -14,4 +15,5 @@ int main()
 	int integer = myClass.get();
 	cout << integer << endl;
 	return 0;
+	//https://github.com/microsoft/cpprestsdk/wiki/JSON
 }

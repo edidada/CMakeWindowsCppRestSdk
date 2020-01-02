@@ -134,3 +134,60 @@ vs默认的编译文件是out文件夹，可以设置的
 #endif
 
 ```
+
+
+### cpprestsdk
+
+https://microsoft.github.io/cpprestsdk/namespaces.html
+
+例子
+https://github.com/microsoft/cpprestsdk/tree/master/Release/samples
+
+
+
+### cpp-netlib
+
+https://cpp-netlib.org/0.13.0/index.html
+
+
+严重性	代码	说明	项目	文件	行	禁止显示状态	禁止显示状态
+错误		CMake Error at D:/vcpkg/scripts/buildsystems/vcpkg.cmake:263 (_find_package):
+  Could not find a package configuration file provided by "cpp-netlib" with
+  any of the following names:
+
+    cpp-netlibConfig.cmake
+    cpp-netlib-config.cmake
+
+  Add the installation prefix of "cpp-netlib" to CMAKE_PREFIX_PATH or set
+  "cpp-netlib_DIR" to a directory containing one of the above files.  If
+  "cpp-netlib" provides a separate development package or SDK, be sure it has
+  been installed.		D:/vcpkg/scripts/buildsystems/vcpkg.cmake	263		
+
+
+
+
+  1> 工作目录: D:\visual studio 2015\Projects\CMakeProject1\out\build\x64-Debug
+1> [CMake] CMake Error at D:/vcpkg/scripts/buildsystems/vcpkg.cmake:263 (_find_package):
+1> [CMake]   Could not find a package configuration file provided by "cpp-netlib" with
+1> [CMake]   any of the following names:
+1> [CMake] 
+1> [CMake]     cpp-netlibConfig.cmake
+1> [CMake]     cpp-netlib-config.cmake
+1> [CMake] 
+1> [CMake]   Add the installation prefix of "cpp-netlib" to CMAKE_PREFIX_PATH or set
+1> [CMake]   "cpp-netlib_DIR" to a directory containing one of the above files.  If
+1> [CMake]   "cpp-netlib" provides a separate development package or SDK, be sure it has
+1> [CMake]   been installed.
+1> [CMake] Call Stack (most recent call first):
+1> [CMake]   CMakeLists.txt:25 (find_package)
+1> [CMake] -- Configuring incomplete, errors occurred!
+1> [CMake] See also "D:/visual studio 2015/Projects/CMakeProject1/out/build/x64-Debug/CMakeFiles/CMakeOutput.log".
+
+
+Poco缺少组件
+
+cpp-netlib缺少什么，不晓得
+
+[cpprestsdk应用实例](https://blog.csdn.net/guotianqing/article/details/102367570)
+
+[cpprestsdk的使用注意问题](https://blog.csdn.net/hayaqi0504/article/details/82180528)
