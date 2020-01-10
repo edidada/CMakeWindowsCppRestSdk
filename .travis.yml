@@ -10,6 +10,7 @@ os:
     - osx
 install:
 before_script:
+  - sudo -l
   - git clone https://github.com/Microsoft/vcpkg.git
   - cd vcpkg
   - ./bootstrap-vcpkg.sh
