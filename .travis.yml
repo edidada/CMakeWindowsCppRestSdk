@@ -8,6 +8,13 @@ os:
   - linux
 install:
 before_script:
+  - git clone https://github.com/Microsoft/vcpkg.git
+  - cd vcpkg
+  - ./bootstrap-vcpkg.sh
+  - current_path=$(cd "$(dirname $0)";pwd)
+  - export PATH=${PATH}:${current_path}
+  - vcpkg install cpp-netlib
+  - vcpkg install gtest
   # create a build folder for the out-of-source build
   - mkdir build
   # switch to build directory
