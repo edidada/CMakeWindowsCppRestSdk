@@ -1,21 +1,21 @@
 language: cpp
 sudo: required
-# dist: xenial
-osx_image: xcode11.3
+dist: bionic
+# osx_image: xcode11.3
 compiler:
-#   - gcc
-  - clang
+  - gcc
+#   - clang
 os:
-#   - linux
-    - osx
+  - linux
+#     - osx
 install:
 before_script:
   - sudo -l
   - git clone https://github.com/Microsoft/vcpkg.git
   - cd vcpkg
   - ./bootstrap-vcpkg.sh
-  - current_path=$(cd "$(dirname $0)";pwd)
-  - export PATH=${PATH}:${current_path}
+  - current_path=$(pwd)
+  - export PATH=$PATH:$current_path
   - vcpkg install cpp-netlib
   - vcpkg install gtest
   # create a build folder for the out-of-source build
