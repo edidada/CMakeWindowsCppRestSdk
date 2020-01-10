@@ -18,12 +18,14 @@ before_script:
   - export PATH=$PATH:$current_path
   - vcpkg install cpp-netlib
   - vcpkg install gtest
+  - vcpkg integrate install
+  - cd ..
   # create a build folder for the out-of-source build
   - mkdir build
   # switch to build directory
   - cd build
   # run cmake; here we assume that the project's
-  - cmake ..
+  - cmake .. -DCMAKE_TOOLCHAIN_FILE=$current_path"/scripts/buildsystems/vcpkg.cmake"
 addons:
   apt:
     update: true
